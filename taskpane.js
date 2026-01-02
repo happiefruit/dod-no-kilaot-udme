@@ -18,31 +18,50 @@ export async function run() {
     if (result.status === Office.AsyncResultStatus.Succeeded) {
       const emailBody = result.value;
       
-      statusLabel.innerHTML = "Thinking (Simulating AI)...";
+      statusLabel.innerHTML = "Thinking (Talking to GPT)...";
 
-      // --- SIMULATED AI PART (We will replace this later) ---
-      // We pretend the AI read the email and wrote this text:
-      const fakeAIResponse = `
-        Hi there,
-        
-        Thanks for your email regarding: "${emailBody.substring(0, 30)}..."
-        
-        I have received your message and will get back to you shortly.
-        
-        Best regards,
-        [Your Name]
-      `;
+      // --- REAL OPENAI CONNECTION ---
+      // IMPORTANT: Paste your sk- key inside the quotes below
+      const apiKey = "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"; 
+
+      try {
+        const response = await fetch("https://api.openai.com/v1/chat/completions", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer " + apiKey
+          },
+          body: JSON.stringify({
+            model: "gpt-4o-mini", // You can also use "gpt-3.5-turbo"
+            messages: [
+              { role: "system", content: "You are a helpful email assistant. Draft a professional and polite reply to this email." },
+              { role: "user", content: emailBody }
+            ],
+            temperature: 0.7
+          })
+        });
+
+        if (!response.ok) {
+             throw new Error("OpenAI Error: " + response.status);
+        }
+
+        const data = await response.json();
+        const aiText = data.choices[0].message.content;
+
+        // 3. Write the reply into the email draft
+        item.body.setSelectedDataAsync(aiText, { coercionType: Office.CoercionType.Text }, (asyncResult) => {
+          if (asyncResult.status === Office.AsyncResultStatus.Failed) {
+            statusLabel.innerHTML = "Error: " + asyncResult.error.message;
+          } else {
+            statusLabel.innerHTML = "Draft inserted!";
+          }
+        });
+
+      } catch (error) {
+        statusLabel.innerHTML = "Failed: " + error.message;
+      }
       // -----------------------------------------------------
 
-      // 3. Write the reply into the email draft
-      // We use setSelectedDataAsync to insert text where the cursor is
-      item.body.setSelectedDataAsync(fakeAIResponse, { coercionType: Office.CoercionType.Text }, (asyncResult) => {
-        if (asyncResult.status === Office.AsyncResultStatus.Failed) {
-            statusLabel.innerHTML = "Error: " + asyncResult.error.message;
-        } else {
-            statusLabel.innerHTML = "Draft inserted!";
-        }
-      });
     } else {
       statusLabel.innerHTML = "Failed to read email.";
     }
