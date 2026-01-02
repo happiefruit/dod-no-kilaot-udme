@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="MailApp">
-  <Id>8508825c-2041-4566-963a-23d6a911765c</Id>
+  <Id>99999999-9999-9999-9999-999999999999</Id>
   <Version>1.0.0.0</Version>
   <ProviderName>Contoso</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="MyOutlookAI" />
   <Description DefaultValue="AI Reply Assistant" />
-  <IconUrl DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme//assets/icon-32.png" />
-  <HighResolutionIconUrl DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme//assets/icon-64.png" />
+  <IconUrl DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme/assets/icon-32.png" />
+  <HighResolutionIconUrl DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme/assets/icon-64.png" />
   <SupportUrl DefaultValue="https://www.contoso.com" />
   <AppDomains>
     <AppDomain>https://happiefruit.github.io/dod-no-kilaot-udme/</AppDomain>
@@ -23,7 +23,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme//taskpane.html" />
+        <SourceLocation DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme/taskpane.html" />
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -36,7 +36,6 @@
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
     <Hosts>
       <Host xsi:type="MailHost">
-        
         <DesktopFormFactor>
           <ExtensionPoint xsi:type="MessageReadCommandSurface">
             <OfficeTab id="TabDefault">
@@ -60,7 +59,6 @@
               </Group>
             </OfficeTab>
           </ExtensionPoint>
-
           <ExtensionPoint xsi:type="MessageComposeCommandSurface">
             <OfficeTab id="TabDefault">
               <Group id="msgComposeGroup">
@@ -88,12 +86,12 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme//assets/icon-16.png" />
-        <bt:Image id="Icon.32x32" DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme//assets/icon-32.png" />
-        <bt:Image id="Icon.80x80" DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme//assets/icon-80.png" />
+        <bt:Image id="Icon.16x16" DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme/assets/icon-16.png" />
+        <bt:Image id="Icon.32x32" DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme/assets/icon-32.png" />
+        <bt:Image id="Icon.80x80" DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme/assets/icon-80.png" />
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme//taskpane.html" />
+        <bt:Url id="Taskpane.Url" DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme/taskpane.html" />
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="MyOutlookAI" />
