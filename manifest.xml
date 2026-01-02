@@ -6,11 +6,11 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="MyOutlookAI" />
   <Description DefaultValue="AI Reply Assistant" />
-  <IconUrl DefaultValue="https://localhost:3000/assets/icon-32.png" />
-  <HighResolutionIconUrl DefaultValue="https://localhost:3000/assets/icon-64.png" />
+  <IconUrl DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme//assets/icon-32.png" />
+  <HighResolutionIconUrl DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme//assets/icon-64.png" />
   <SupportUrl DefaultValue="https://www.contoso.com" />
   <AppDomains>
-    <AppDomain>https://localhost:3000</AppDomain>
+    <AppDomain>https://happiefruit.github.io/dod-no-kilaot-udme/</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Mailbox" />
@@ -23,7 +23,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://localhost:3000/taskpane.html" />
+        <SourceLocation DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme//taskpane.html" />
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -88,12 +88,12 @@
     </Hosts>
     <Resources>
       <bt:Images>
-        <bt:Image id="Icon.16x16" DefaultValue="https://localhost:3000/assets/icon-16.png" />
-        <bt:Image id="Icon.32x32" DefaultValue="https://localhost:3000/assets/icon-32.png" />
-        <bt:Image id="Icon.80x80" DefaultValue="https://localhost:3000/assets/icon-80.png" />
+        <bt:Image id="Icon.16x16" DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme//assets/icon-16.png" />
+        <bt:Image id="Icon.32x32" DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme//assets/icon-32.png" />
+        <bt:Image id="Icon.80x80" DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme//assets/icon-80.png" />
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://localhost:3000/taskpane.html" />
+        <bt:Url id="Taskpane.Url" DefaultValue="https://happiefruit.github.io/dod-no-kilaot-udme//taskpane.html" />
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="MyOutlookAI" />
